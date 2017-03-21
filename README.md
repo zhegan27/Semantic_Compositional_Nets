@@ -42,7 +42,7 @@ CIDEr: 1.043, Bleu-4: 0.341, Bleu-3: 0.446, Bleu-2: 0.582, Bleu-1: 0.743, ROUGE_
 
 Model architecture and illustration of semantic composition.
 
-<img src="figure1.png" width=“800px">
+<img src="figure1.png" width="800px">
 
 ## Citing SCN
 
