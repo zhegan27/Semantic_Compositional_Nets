@@ -41,7 +41,7 @@ CIDEr: 1.043, Bleu-4: 0.341, Bleu-3: 0.446, Bleu-2: 0.582, Bleu-1: 0.743, ROUGE_
 4. In the `./data/coco` folder, we also provide the features for the COCO official validation and test sets. Run `SCN_for_test_server.py` will help you generate captions for the official test set, and prepare the `.json` file for submission. 
 
 Model architecture and illustration of semantic composition.
-<img src="figure1.png" width="600px">
+<img src="figure1.png" width=“400px">
 
 ## Citing SCN
 
