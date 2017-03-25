@@ -44,6 +44,10 @@ CIDEr: 1.043, Bleu-4: 0.341, Bleu-3: 0.446, Bleu-2: 0.582, Bleu-1: 0.743, ROUGE_
 
 4. In the `./data/coco` folder, we also provide the features for the COCO official validation and test sets. Run `SCN_for_test_server.py` will help you generate captions for the official test set, and prepare the `.json` file for submission. 
 
+## Video Captioning
+
+In order to keep things simple, we provide [another separate repo](https://github.com/zhegan27/SCN_for_video_captioning) that reproduces our results on video captioning, using the Youtube2Text dataset.
+
 ## Citing SCN
 
 Please cite our CVPR paper in your publications if it helps your research:
