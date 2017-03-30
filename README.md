@@ -1,6 +1,6 @@
 # Semantic Compositional Networks
 
-The Theano code for the CVPR 2017 paper “[Semantic Compositional Networks for Visual Captioning](https://arxiv.org/pdf/1611.08002.pdf)”
+The Theano code for the CVPR 2017 paper “[Semantic Compositional Networks for Visual Captioning](https://arxiv.org/pdf/1611.08002v2.pdf)”
 
 Model architecture and illustration of semantic composition.
 
