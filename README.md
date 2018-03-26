@@ -44,6 +44,81 @@ CIDEr: 1.043, Bleu-4: 0.341, Bleu-3: 0.446, Bleu-2: 0.582, Bleu-1: 0.743, ROUGE_
 
 4. In the `./data/coco` folder, we also provide the features for the COCO official validation and test sets. Run `SCN_for_test_server.py` will help you generate captions for the official test set, and prepare the `.json` file for submission. 
 
+## Demo: generating image tags and captions from scratch 
+
+We provide a demo code [here](https://www.dropbox.com/sh/nevmepvedpm5nmz/AACL_Si8hHIljvH5aionIfGKa?dl=0) that detects tags and generates captions from scratch. The code is for research purposes only. 
+
+Requirement: The code runs on Windows system and requires Python 3.6.
+
+We provide two running mode. First, generate a caption from an image url. Second, generate captions from a batch of images. 
+
+1. We can generate a caption from an image url by running `demo_image_captioning`. Below are two examples. 
+
+```
+python demo_image_captioning.py --image_url http://c8.alamy.com/comp/CR318J/border-collie-playing-with-a-frisbee-in-its-mouth-on-a-meadow-with-CR318J.jpg 
+``` 
+
+Outputs:
+
+```
+start image captioning @ 12:38:08.430527
+first, downloading the image ...
+second, extract image features ...
+Now, start image captioning ...
+Detected tags: grass (1.0), field (0.985), dog (0.977), outdoor (0.94), black (0.919), yellow (0.65), green (0.591), grassy (0.388), small (0.341), standing (0.301),
+Generated captions: a black dog with a frisbee in its mouth
+end @ 12:38:13.249350
+``` 
+
+Another example: 
+
+```
+python demo_image_captioning.py --image_url https://coresites-cdn.factorymedia.com/mpora_new/wp-content/uploads/2017/10/Porthleven-Surf-Sep2017-%C2%A9EdBlomfield-100.jpg 
+``` 
+
+Outputs:
+
+```
+start image captioning @ 12:38:16.257385
+first, downloading the image ...
+second, extract image features ...
+Now, start image captioning ...
+Detected tags: water (1.0), sport (0.997), surfing (0.997), wave (0.995), outdoor (0.993), riding (0.978), ocean (0.946), man (0.756), top (0.463), board (0.448),
+Generated captions: a man riding a wave on top of a surfboard
+end @ 12:38:21.217550
+``` 
+
+The two images corresponding to the image urls above are below. 
+
+<img src="figure2.png" width="800px">
+
+2. We can also generate captions for a batch of images by running `demo_image_captioning_batch`.
+
+```
+python demo_image_captioning_batch.py 
+``` 
+
+Outputs look like the following: 
+
+```
+start image captioning @ 21:00:20.145487
+First, extract image features ...
+Now, start image captioning ...
+Image name: COCO_test2014_000000000001.jpg
+Detected tags: outdoor (0.999), grass (0.996), truck (0.973), fence (0.97), road (0.872), street (0.515), car (0.494), green (0.466), next (0.438), parked (0.391),
+Generated captions: a truck is parked on the side of the road
+
+Image name: COCO_test2014_000000000014.jpg
+Detected tags: road (1.0), outdoor (0.994), building (0.973), street (0.927), person (0.811), motorcycle (0.705), man (0.609), sidewalk (0.585), walking (0.443), crossing (0.389),
+Generated captions: a man riding a motorcycle down a street
+
+...
+
+end @ 21:00:45.461410
+``` 
+
+Generating captions for 10 images roughly takes 25 seconds. 
+
 ## Video Captioning
 
 In order to keep things simple, we provide [another separate repo](https://github.com/zhegan27/SCN_for_video_captioning) that reproduces our results on video captioning, using the Youtube2Text dataset.
