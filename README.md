@@ -46,13 +46,11 @@ CIDEr: 1.043, Bleu-4: 0.341, Bleu-3: 0.446, Bleu-2: 0.582, Bleu-1: 0.743, ROUGE_
 
 ## Demo: generating image tags and captions from scratch 
 
-We provide a demo code [here](https://www.dropbox.com/sh/nevmepvedpm5nmz/AACL_Si8hHIljvH5aionIfGKa?dl=0) that detects tags and generates captions from scratch. The code is for research purposes only. 
+We provide a demo code [here](https://www.dropbox.com/sh/nevmepvedpm5nmz/AACL_Si8hHIljvH5aionIfGKa?dl=0) that detects tags and generates captions from scratch. The code is for research purposes only. The code runs on Windows system and requires Python 3.6.
 
-Requirement: The code runs on Windows system and requires Python 3.6.
+We provide two running modes. First, generate a caption from a given image url. Second, generate captions for a batch of images. 
 
-We provide two running mode. First, generate a caption from an image url. Second, generate captions from a batch of images. 
-
-1. We can generate a caption from an image url by running `demo_image_captioning`. Below are two examples. 
+1. We can generate a caption from an image url by running `demo_image_captioning.py`. Below are two examples. 
 
 ```
 python demo_image_captioning.py --image_url http://c8.alamy.com/comp/CR318J/border-collie-playing-with-a-frisbee-in-its-mouth-on-a-meadow-with-CR318J.jpg 
@@ -88,11 +86,11 @@ Generated captions: a man riding a wave on top of a surfboard
 end @ 12:38:21.217550
 ``` 
 
-The two images corresponding to the image urls above are below. 
+The two images corresponding to the image urls above are shown below. 
 
 <img src="figure2.png" width="800px">
 
-2. We can also generate captions for a batch of images by running `demo_image_captioning_batch`.
+2. We can also generate captions for a batch of images by running `demo_image_captioning_batch.py`.
 
 ```
 python demo_image_captioning_batch.py 
